@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- <parent> -->
+	<groupId>org.apn.elasticsearch</groupId>
+	<!-- <artifactId>elasticsearch-elixir</artifactId> -->
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- </parent> -->
+	<artifactId>elasticsearch-plugin</artifactId>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+		<maven.compiler.source>${jdk.version}</maven.compiler.source>
+		<maven.compiler.target>${jdk.version}</maven.compiler.target>
+
+		<!-- Change to latest version -->
+		<elasticsearch.version>6.2.2</elasticsearch.version>
+		<junit.version>4.12</junit.version>
+
+		<lucene.version>7.2.1</lucene.version>
+
+		<plugin.name>elasticsearch-custom-plugin</plugin.name>
+		<description>Elastic Search query parser custom plugin.</description>
+		<plugin.class>org.apn.elasticsearch.plugin.CustomQueryPlugin</plugin.class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>transport</artifactId>
+			<version>${elasticsearch.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hamcrest</groupId>
+					<artifactId>hamcrest</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.hamcrest</groupId>
+					<artifactId>hamcrest-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-test-framework</artifactId>
+			<version>${lucene.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.test</groupId>
+			<artifactId>framework</artifactId>
+			<version>${elasticsearch.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources/</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<outputDirectory>${project.build.directory}/releases/</outputDirectory>
+					<descriptors>
+						<descriptor>${basedir}/src/main/assembly/plugin.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

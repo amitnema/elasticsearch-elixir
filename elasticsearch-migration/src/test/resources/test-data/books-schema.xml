@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="books" version="1.5">
+	<fields>
+		<field name="isbn" type="string" indexed="true" stored="true"
+			required="true" />
+		<field name="book_title" type="string" indexed="true"
+			stored="true" />
+		<field name="book-author" type="string" indexed="true"
+			stored="true" multiValued="true" />
+		<field name="year_of_publication" type="long" indexed="true"
+			stored="true" />
+		<field name="publisher" type="string" indexed="false"
+			stored="true" />
+		<field name="image_url-s" type="String" indexed="false"
+			stored="false" />
+		<field name="image_url-m" type="String" indexed="false"
+			stored="false" />
+		<field name="image_url-l" type="String" indexed="false"
+			stored="false" />
+		<dynamicField name="*_f" type="float" stored="true"
+			indexed="true" />
+		<dynamicField name="*_d" type="double" indexed="true"
+			stored="true" />
+	</fields>
+	<uniqueKey>isbn</uniqueKey>
+	<defaultSearchField>book_title</defaultSearchField>
+	<types>
+		<!-- ... types defined here -->
+	</types>
+</schema>
