@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/amitnema/elasticsearch-elixir.svg?branch=master)](https://travis-ci.org/amitnema/elasticsearch-elixir)
+
+
 # Elasticsearch Elixir
 This contains the general purpose solutions for elasticsearch engine.
 
