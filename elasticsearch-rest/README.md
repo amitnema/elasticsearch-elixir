@@ -1,0 +1,1 @@
+﻿﻿﻿﻿﻿﻿﻿# Elasticsearch RestThis is an example to use elasticsearch high level rest api.	## Package	mvn clean package## ExecutionRun the following command to execute.	> java -jar elasticsearch-rest\target\elasticsearch-rest-6.2.2-jar-with-dependencies.jar

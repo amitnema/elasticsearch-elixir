@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -18,9 +19,10 @@
 	</scm>
 
 	<modules>
+		<!-- <module>elasticsearch-plugin</module> -->
 		<module>elasticsearch-migration</module>
 		<module>elasticsearch-spark</module>
-		<!-- <module>elasticsearch-plugin</module> -->
+		<module>elasticsearch-rest</module>
 		<module>elasticsearch-spring</module>
 	</modules>
 
@@ -31,7 +33,7 @@
 		<maven.compiler.target>${jdk.version}</maven.compiler.target>
 
 		<!-- Change to latest version -->
-		<elasticsearch.version>6.2.2</elasticsearch.version>
+		<elasticsearch.version>6.5.4</elasticsearch.version>
 		<junit.version>4.12</junit.version>
 		<scala.version>2.11</scala.version>
 		<scala.tools.version>${scala.version}.8</scala.tools.version>
@@ -105,5 +107,11 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
 </project>
