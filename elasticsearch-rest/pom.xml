@@ -29,4 +29,64 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.alexcojocaru</groupId>
+				<artifactId>elasticsearch-maven-plugin</artifactId>
+				<!-- REPLACE THE FOLLOWING WITH THE PLUGIN VERSION YOU NEED -->
+				<version>6.8</version>
+				<configuration>
+					<!-- REPLACE THE FOLLOWING WITH THE ELASTICSEARCH VERSION YOU NEED -->
+					<version>${elasticsearch.version}</version>
+					<clusterName>test</clusterName>
+					<transportPort>9300</transportPort>
+					<httpPort>9200</httpPort>
+				</configuration>
+				<executions>
+					<!-- The elasticsearch maven plugin goals are by default bound to the 
+						pre-integration-test and post-integration-test phases -->
+					<execution>
+						<id>start-elasticsearch</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>runforked</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>stop-elasticsearch</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- disable surefire -->
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<includes>
+						<include>**/*IT.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
