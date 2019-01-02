@@ -10,7 +10,7 @@
 	<artifactId>elasticsearch-spring</artifactId>
 
 	<properties>
-		<spring.data.version>3.1.0.BUILD-SNAPSHOT</spring.data.version>
+		<spring.data.version>3.2.0.M1</spring.data.version>
 		<spring.version>5.1.0.RC3</spring.version>
 		<lombok.version>1.18.2</lombok.version>
 	</properties>
@@ -42,6 +42,13 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-elasticsearch</artifactId>
 			<version>${spring.data.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>
+				elasticsearch-rest-high-level-client
+			</artifactId>
+			<version>${elasticsearch.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
