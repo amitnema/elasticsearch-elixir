@@ -21,9 +21,6 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 @ComponentScan(basePackages = { "org.apn.spring.data.es.service" })
 public class RestConfig {
 
-	@Value("${elasticsearch.cluster.name:elasticsearch}")
-	private String clusterName;
-
 	@Value("${elasticsearch.hostName:localhost}")
 	private String hostName;
 
