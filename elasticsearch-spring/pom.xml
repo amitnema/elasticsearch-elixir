@@ -48,12 +48,6 @@
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 		</dependency>
-		<!-- add the x-pack jar as a dependency, if required -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.elasticsearch.client</groupId> -->
-		<!-- <artifactId>x-pack-transport</artifactId> -->
-		<!-- <version>${elasticsearch.version}</version> -->
-		<!-- </dependency> -->
 		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -63,12 +57,4 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-	</build>
 </project>
