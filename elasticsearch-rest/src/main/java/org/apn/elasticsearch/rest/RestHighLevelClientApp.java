@@ -42,7 +42,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
  * The Class deals with Elasticsearch common usecases via
  * {@link RestHighLevelClient}</code>.
  * 
- * @author amitnema
+ * @author amit.nema
  *
  */
 public class RestHighLevelClientApp implements Closeable {

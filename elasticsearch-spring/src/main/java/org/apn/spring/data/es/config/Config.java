@@ -36,26 +36,21 @@ public class Config {
 	private Integer port;
 
 	@Bean
-	public Client client() {
+	public Client client() throws UnknownHostException {
 		TransportClient client = null;
-		Settings settings = Settings.builder()
+		final Settings settings = Settings.builder()
 				// --after sniffing, no further requests will go to that master node
 				// -- For secure cluster see
 				// https://www.elastic.co/guide/en/x-pack/current/java-clients.html
 				.put("client.transport.sniff", true)//
 				.put("cluster.name", clusterName).build();
-		try {
-			client = new PreBuiltTransportClient(settings);
-			client.addTransportAddress(new TransportAddress(InetAddress.getByName(hostName), port));
-
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		}
+		client = new PreBuiltTransportClient(settings);
+		client.addTransportAddress(new TransportAddress(InetAddress.getByName(hostName), port));
 		return client;
 	}
 
 	@Bean
-	public ElasticsearchOperations elasticsearchTemplate() {
+	public ElasticsearchOperations elasticsearchTemplate() throws UnknownHostException {
 		return new ElasticsearchTemplate(client());
 	}
 }

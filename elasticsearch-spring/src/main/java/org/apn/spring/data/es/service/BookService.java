@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 
 public interface BookService {
 
-	Book save(Book Book);
+	Book save(Book book);
 
 	Optional<Book> findOne(String id);
 
@@ -24,5 +24,5 @@ public interface BookService {
 
 	long count();
 
-	void delete(Book Book);
+	void delete(Book book);
 }
