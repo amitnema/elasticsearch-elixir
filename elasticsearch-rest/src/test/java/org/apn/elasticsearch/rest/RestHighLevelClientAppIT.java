@@ -8,12 +8,11 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * @author amitnema
+ * @author amit.nema
  *
  */
 public class RestHighLevelClientAppIT {

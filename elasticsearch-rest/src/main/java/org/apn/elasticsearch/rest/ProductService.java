@@ -24,7 +24,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 
 /**
- * @author amitnema
+ * @author amit.nema
  *
  */
 public class ProductService {
