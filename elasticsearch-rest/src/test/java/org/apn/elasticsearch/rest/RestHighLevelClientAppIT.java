@@ -16,9 +16,9 @@ import org.testng.annotations.Test;
  * @author amitnema
  *
  */
-public class RestHighLevelClientAppTest {
+public class RestHighLevelClientAppIT {
 
-	private static final Log LOGGER = LogFactory.getLog(RestHighLevelClientAppTest.class);
+	private static final Log LOGGER = LogFactory.getLog(RestHighLevelClientAppIT.class);
 
 	private RestHighLevelClientApp app;
 
