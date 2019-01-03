@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/amitnema/elasticsearch-elixir.svg?branch=master)](https://travis-ci.org/amitnema/elasticsearch-elixir) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=amitnema_elasticsearch-elixir&metric=alert_status)](https://sonarcloud.io/dashboard?id=amitnema_elasticsearch-elixir)
+[![Build Status](https://travis-ci.org/amitnema/elasticsearch-elixir.svg?branch=master)](https://travis-ci.org/amitnema/elasticsearch-elixir) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=amitnema_elasticsearch-elixir&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.apn.elasticsearch%3Aelasticsearch-elixir)
 
 
 # Elasticsearch Elixir
