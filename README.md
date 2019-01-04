@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/amitnema/elasticsearch-elixir.svg?branch=master)](https://travis-ci.org/amitnema/elasticsearch-elixir)  |  [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.apn.elasticsearch%3Aelasticsearch-elixir&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.apn.elasticsearch%3Aelasticsearch-elixir)  |  [![Sputnik](https://sputnik.ci/conf/badge)](https://sputnik.ci/app#/builds/amitnema/elasticsearch-elixir)
+[![Build Status](https://travis-ci.org/amitnema/elasticsearch-elixir.svg?branch=master)](https://travis-ci.org/amitnema/elasticsearch-elixir)  |  [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.apn.elasticsearch%3Aelasticsearch-elixir&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.apn.elasticsearch%3Aelasticsearch-elixir)  |  [![Sputnik](https://sputnik.ci/conf/badge)](https://sputnik.ci/app#/builds/amitnema/elasticsearch-elixir)  |  [![CircleCI](https://circleci.com/gh/amitnema/elasticsearch-elixir.svg?style=svg)](https://circleci.com/gh/amitnema/elasticsearch-elixir)
 
 
 # Elasticsearch Elixir
