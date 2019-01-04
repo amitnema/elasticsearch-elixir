@@ -13,6 +13,7 @@
 		<spring.data.version>3.2.0.M1</spring.data.version>
 		<spring.version>5.1.0.RC3</spring.version>
 		<lombok.version>1.18.2</lombok.version>
+		<surefire.useSystemClassLoader>false</surefire.useSystemClassLoader>
 	</properties>
 
 	<repositories>
