@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>elasticsearch-spark</artifactId>
-	<name>Elastic Search Spark</name>
+	<name>Elasticsearch Spark</name>
 	<description><![CDATA[This contains the common solution to move the data to elastic search engine using spark.]]></description>
 
 	<properties>

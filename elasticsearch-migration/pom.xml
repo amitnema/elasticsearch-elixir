@@ -9,7 +9,7 @@
 	</parent>
 
 	<artifactId>elasticsearch-migration</artifactId>
-	<name>Elastic Search Migration</name>
+	<name>Elasticsearch Migration</name>
 	<description><![CDATA[This contains the common solution to migrate to elastic search engine from solr.]]></description>
 
 	<properties>

@@ -8,17 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>elasticsearch-plugin</artifactId>
+	<name>Elasticsearch Plugin</name>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk.version>1.8</jdk.version>
-		<maven.compiler.source>${jdk.version}</maven.compiler.source>
-		<maven.compiler.target>${jdk.version}</maven.compiler.target>
-
-		<!-- Change to latest version -->
-		<elasticsearch.version>6.5.4</elasticsearch.version>
-		<junit.version>4.12</junit.version>
-
 		<lucene.version>7.5.0</lucene.version>
 
 		<plugin.name>elasticsearch-custom-plugin</plugin.name>
@@ -33,16 +25,10 @@
 			<version>${elasticsearch.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.11.1</version>
-		</dependency>
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>

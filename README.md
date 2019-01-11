@@ -36,5 +36,9 @@ O/p: elasticsearch settings-mappings file can be find at 'path/to/conf/schema.xm
 	sudo bin/elasticsearch-plugin remove elasticsearch-custom-plugin
 
 
+##### Elasticsearch Rest
+This is an example to use Elasticsearch high level rest api.
+
+
 ------------------------------------------------------------
 <sub>1: This module is not related to parent pom</sub>

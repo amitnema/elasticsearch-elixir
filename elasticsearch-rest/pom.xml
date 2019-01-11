@@ -8,6 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>elasticsearch-rest</artifactId>
+	<name>Elasticsearch Rest</name>
 	<description><![CDATA[This module contains the solution to acess elastic search engine via elasticsearch rest (low level and high level) API.]]></description>
 
 	<dependencies>
@@ -15,11 +16,6 @@
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-high-level-client</artifactId>
 			<version>${elasticsearch.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.11.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
