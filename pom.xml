@@ -11,7 +11,7 @@
 
 	<name>Elastic Search Elixir</name>
 	<url>https://github.com/amitnema/</url>
-	<description><![CDATA[This contains the common solution for elastic search engine.]]></description>
+	<description><![CDATA[This contains the common solution for Elasticsearch engine.]]></description>
 
 	<scm>
 		<connection>https://github.com/amitnema/elasticsearch-elixir.git</connection>
@@ -65,6 +65,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.1</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

@@ -10,17 +10,16 @@
 	<files>
 		<file>
 			<source>src/main/resources/plugin-metadata/plugin-descriptor.properties</source>
-			<outputDirectory>/elasticsearch</outputDirectory>
 			<filtered>true</filtered>
 		</file>
 	</files>
 	<dependencySets>
 		<dependencySet>
-			<outputDirectory>/elasticsearch</outputDirectory>
 			<useProjectArtifact>true</useProjectArtifact>
 			<useTransitiveFiltering>true</useTransitiveFiltering>
 			<excludes>
 				<exclude>org.elasticsearch:elasticsearch</exclude>
+				<exclude>org.apache.logging.log4j:*</exclude>
 			</excludes>
 		</dependencySet>
 	</dependencySets>
