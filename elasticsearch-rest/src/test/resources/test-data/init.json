@@ -1,0 +1,123 @@
+[
+	{
+		"method": "PUT",
+		"path": "users",
+		"payload": {
+			"settings": {
+				"index": {
+					"number_of_shards": "5",
+					"number_of_replicas": "1"
+				}
+			}
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/_mapping",
+		"payload": {
+			"_doc": {
+				"properties": {
+					"Age": {
+						"type": "long"
+					},
+					"Location": {
+						"type": "text"
+					},
+					"User-ID": {
+						"type": "long"
+					}
+				}
+			}
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/1",
+		"payload": {
+			"User-ID": 1,
+			"Location": "nyc, new york, usa",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/2",
+		"payload": {
+			"User-ID": 2,
+			"Location": "stockton, california, usa",
+			"Age": 18
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/3",
+		"payload": {
+			"User-ID": 3,
+			"Location": "moscow, yukon territory, russia",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/4",
+		"payload": {
+			"User-ID": 4,
+			"Location": "porto, v.n.gaia, portugal",
+			"Age": 17
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/5",
+		"payload": {
+			"User-ID": 5,
+			"Location": "farnborough, hants, united kingdom",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/6",
+		"payload": {
+			"User-ID": 6,
+			"Location": "santa monica, california, usa",
+			"Age": 61
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/7",
+		"payload": {
+			"User-ID": 7,
+			"Location": "washington, dc, usa",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/8",
+		"payload": {
+			"User-ID": 8,
+			"Location": "timmins, ontario, canada",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/9",
+		"payload": {
+			"User-ID": 9,
+			"Location": "germantown, tennessee, usa",
+			"Age": 0
+		}
+	},
+	{
+		"method": "POST",
+		"path": "users/_doc/10",
+		"payload": {
+			"User-ID": 10,
+			"Location": "albacete, wisconsin, spain",
+			"Age": 26
+		}
+	}
+]

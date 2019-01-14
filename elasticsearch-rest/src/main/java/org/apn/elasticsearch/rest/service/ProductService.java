@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.apn.elasticsearch.rest;
+package org.apn.elasticsearch.rest.service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apn.elasticsearch.rest.RestHighLevelClientApp;
 import org.apn.elasticsearch.rest.utils.Constants;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -29,7 +30,7 @@ import org.elasticsearch.search.sort.SortOrder;
  */
 public class ProductService {
 
-	private static final Log LOGGER = LogFactory.getLog(RestHighLevelClientApp.class);
+	private static final Log LOGGER = LogFactory.getLog(ProductService.class);
 
 	private final RestHighLevelClient client;
 
@@ -53,8 +54,7 @@ public class ProductService {
 		}
 	}
 
-	public void bulkIndex(final String index) throws IOException {
-		final RestHighLevelClientApp app = new RestHighLevelClientApp(client);
+	public void bulkIndex(final RestHighLevelClientApp app, final String index) throws IOException {
 		app.bulkIndex(index, "ProductID", getSourceToIngest());
 	}
 

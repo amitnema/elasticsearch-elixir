@@ -64,14 +64,4 @@ public class RestLowLevelClientApp implements Closeable {
 		final Response response = client.performRequest(req);
 		return response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
 	}
-
-	public static void main(final String[] args) throws IOException {
-		LOGGER.info("RestLowLevelClientApp.main()");
-		try (final RestLowLevelClientApp app = new RestLowLevelClientApp(
-				new HttpHost[] { new HttpHost("localhost", 9200) }, "product", "_doc")) {
-			LOGGER.info("indexExists:" + app.indexExists());
-			app.refreshIndex();
-			app.findById("3");
-		}
-	}
 }

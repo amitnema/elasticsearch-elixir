@@ -18,6 +18,11 @@
 			<version>${elasticsearch.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.8</version>
+		</dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
@@ -30,18 +35,47 @@
 			<plugin>
 				<groupId>com.github.alexcojocaru</groupId>
 				<artifactId>elasticsearch-maven-plugin</artifactId>
-				<!-- REPLACE THE FOLLOWING WITH THE PLUGIN VERSION YOU NEED -->
-				<version>6.8</version>
 				<configuration>
-					<!-- REPLACE THE FOLLOWING WITH THE ELASTICSEARCH VERSION YOU NEED -->
 					<version>${elasticsearch.version}</version>
-					<clusterName>test</clusterName>
-					<transportPort>9300</transportPort>
-					<httpPort>9200</httpPort>
+					<clusterName>test-cluster</clusterName>
+					<httpPort>${es.port}</httpPort>
+					<skip>${skipITs}</skip>
+					<setAwait>false</setAwait>
+					<timeout>300</timeout>
+					<pathInitScript>${project.build.testOutputDirectory}\test-data\init.json</pathInitScript>
+					<instanceCount>4</instanceCount>
+					<instanceSettings>
+						<properties>
+							<node.name>node-master0</node.name>
+							<node.attr.data_type>master</node.attr.data_type>
+						</properties>
+						<properties>
+							<node.name>node-master1</node.name>
+							<node.attr.data_type>master</node.attr.data_type>
+						</properties>
+						<properties>
+							<node.name>node-data</node.name>
+							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
+							<node.attr.data_type>data</node.attr.data_type>
+						</properties>
+						<properties>
+							<node.name>node-ingest</node.name>
+							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
+							<node.attr.data_type>ingest</node.attr.data_type>
+						</properties>
+						<properties>
+							<node.name>node-search</node.name>
+							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
+							<node.attr.data_type>search</node.attr.data_type>
+						</properties>
+					</instanceSettings>
+					<plugins>
+						<plugin>
+							<uri>file:///${project.basedir}/../elasticsearch-plugin/target/releases/elasticsearch-plugin-${project.version}.zip</uri>
+						</plugin>
+					</plugins>
 				</configuration>
 				<executions>
-					<!-- The elasticsearch maven plugin goals are by default bound to the 
-						pre-integration-test and post-integration-test phases -->
 					<execution>
 						<id>start-elasticsearch</id>
 						<phase>pre-integration-test</phase>
@@ -67,7 +101,6 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M3</version>
 				<executions>
 					<execution>
 						<goals>

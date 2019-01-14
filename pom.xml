@@ -22,8 +22,8 @@
 		<module>elasticsearch-plugin</module>
 		<module>elasticsearch-migration</module>
 		<module>elasticsearch-spark</module>
-		<module>elasticsearch-rest</module>
 		<module>elasticsearch-spring</module>
+		<module>elasticsearch-rest</module>
 	</modules>
 
 	<properties>
@@ -38,13 +38,27 @@
 		<scala.version>2.11</scala.version>
 		<scala.tools.version>${scala.version}.8</scala.tools.version>
 		<scalatest.version>3.0.5</scalatest.version>
+		<lombok.version>1.18.2</lombok.version>
+
+		<!-- elasticsearch details -->
+		<es.nodes>localhost</es.nodes>
+		<es.port>9200</es.port>
+		<es.net.http.auth.user />
+		<es.net.http.auth.pass />
+		<es.net.ssl.protocol />
+		<es.net.ssl />
+		<es.net.ssl.truststore.location />
+		<es.net.ssl.truststore.pass />
+		<es.net.http.auth.scheme>http</es.net.http.auth.scheme>
 
 		<!-- plugins -->
+		<elasticsearch-maven-plugin.version>6.9</elasticsearch-maven-plugin.version>
 		<maven-scala-plugin.version>2.15.2</maven-scala-plugin.version>
-		<maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
-		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<scalatest-maven-plugin.version>2.0.0</scalatest-maven-plugin.version>
 		<maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+		<maven-failsafe-plugin.version>3.0.0-M3</maven-failsafe-plugin.version>
+		<maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 
 		<log.level>error</log.level>
 	</properties>
@@ -61,10 +75,20 @@
 				<artifactId>scala-library</artifactId>
 				<version>${scala.tools.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.github.alexcojocaru</groupId>
+				<artifactId>elasticsearch-maven-plugin</artifactId>
+				<version>${elasticsearch-maven-plugin.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
@@ -93,6 +117,10 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${maven-failsafe-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-assembly-plugin</artifactId>

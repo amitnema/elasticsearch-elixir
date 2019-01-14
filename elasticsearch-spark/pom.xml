@@ -13,7 +13,7 @@
 	<description><![CDATA[This contains the common solution to move the data to elastic search engine using spark.]]></description>
 
 	<properties>
-		<spark.version>2.3.0</spark.version>
+		<spark.version>2.4.0</spark.version>
 		<lucene.version>7.2.1</lucene.version>
 	</properties>
 
@@ -65,18 +65,13 @@
 			<plugin>
 				<groupId>com.github.alexcojocaru</groupId>
 				<artifactId>elasticsearch-maven-plugin</artifactId>
-				<!-- REPLACE THE FOLLOWING WITH THE PLUGIN VERSION YOU NEED -->
-				<version>6.8</version>
 				<configuration>
-					<!-- REPLACE THE FOLLOWING WITH THE ELASTICSEARCH VERSION YOU NEED -->
 					<version>${elasticsearch.version}</version>
-					<clusterName>test</clusterName>
-					<transportPort>9300</transportPort>
-					<httpPort>9200</httpPort>
+					<clusterName>test-cluster</clusterName>
+					<httpPort>${es.port}</httpPort>
+					<skip>${skipITs}</skip>
 				</configuration>
 				<executions>
-					<!-- The elasticsearch maven plugin goals are by default bound to the 
-						pre-integration-test and post-integration-test phases -->
 					<execution>
 						<id>start-elasticsearch</id>
 						<phase>pre-integration-test</phase>
