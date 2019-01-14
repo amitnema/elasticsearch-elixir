@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutionException;
 
 import org.elasticsearch.cluster.metadata.IndexMetaData;
 import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.test.ESIntegTestCase;
 import org.junit.Before;
@@ -40,7 +41,7 @@ public class CustomQueryPluginTest extends ESIntegTestCase {
 				.setSettings(settings).addMapping(_TYPE, jsonBuilder().startObject().startObject("properties")
 						.startObject("isbn").field("type", "text").endObject().endObject().endObject())
 				.get().isAcknowledged();
-		ensureGreen();
+		ensureGreen(TimeValue.timeValueSeconds(300));
 
 		client().prepareIndex(_INDEX, _TYPE, "1")
 				.setSource("isbn", "0393045218", "book_title", "The Mummies of Urumchi", "book_author",

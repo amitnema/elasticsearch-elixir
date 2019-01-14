@@ -75,11 +75,6 @@
 				<artifactId>scala-library</artifactId>
 				<version>${scala.tools.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>com.github.alexcojocaru</groupId>
-				<artifactId>elasticsearch-maven-plugin</artifactId>
-				<version>${elasticsearch-maven-plugin.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -129,6 +124,11 @@
 				<plugin>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>${maven-release-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.github.alexcojocaru</groupId>
+					<artifactId>elasticsearch-maven-plugin</artifactId>
+					<version>${elasticsearch-maven-plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
