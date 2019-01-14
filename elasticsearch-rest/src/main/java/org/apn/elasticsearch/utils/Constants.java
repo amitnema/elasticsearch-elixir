@@ -1,4 +1,4 @@
-package org.apn.elasticsearch.rest.utils;
+package org.apn.elasticsearch.utils;
 
 public class Constants {
 

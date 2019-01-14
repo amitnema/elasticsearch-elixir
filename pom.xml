@@ -9,7 +9,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Elastic Search Elixir</name>
+	<name>Elasticsearch Elixir</name>
 	<url>https://github.com/amitnema/</url>
 	<description><![CDATA[This contains the common solution for Elasticsearch engine.]]></description>
 

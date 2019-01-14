@@ -1,4 +1,4 @@
-package org.apn.rest.service;
+package org.apn.elasticsearch.service;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
@@ -10,8 +10,8 @@ import java.util.Objects;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
-import org.apn.User;
-import org.apn.elasticsearch.rest.service.UserService;
+import org.apn.elasticsearch.entities.User;
+import org.apn.elasticsearch.service.UserService;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.testng.annotations.AfterClass;
