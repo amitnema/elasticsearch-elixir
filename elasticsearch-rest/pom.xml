@@ -43,32 +43,32 @@
 					<setAwait>false</setAwait>
 					<timeout>300</timeout>
 					<pathInitScript>${project.build.testOutputDirectory}\test-data\init.json</pathInitScript>
-					<instanceCount>4</instanceCount>
-					<instanceSettings>
-						<properties>
-							<node.name>node-master0</node.name>
-							<node.attr.data_type>master</node.attr.data_type>
-						</properties>
-						<properties>
-							<node.name>node-master1</node.name>
-							<node.attr.data_type>master</node.attr.data_type>
-						</properties>
-						<properties>
-							<node.name>node-data</node.name>
-							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
-							<node.attr.data_type>data</node.attr.data_type>
-						</properties>
-						<properties>
-							<node.name>node-ingest</node.name>
-							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
-							<node.attr.data_type>ingest</node.attr.data_type>
-						</properties>
-						<properties>
-							<node.name>node-search</node.name>
-							<discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes>
-							<node.attr.data_type>search</node.attr.data_type>
-						</properties>
-					</instanceSettings>
+					<!-- <instanceCount>4</instanceCount> -->
+					<!-- <instanceSettings> -->
+					<!-- <properties> -->
+					<!-- <node.name>node-master0</node.name> -->
+					<!-- <node.attr.data_type>master</node.attr.data_type> -->
+					<!-- </properties> -->
+					<!-- <properties> -->
+					<!-- <node.name>node-master1</node.name> -->
+					<!-- <node.attr.data_type>master</node.attr.data_type> -->
+					<!-- </properties> -->
+					<!-- <properties> -->
+					<!-- <node.name>node-data</node.name> -->
+					<!-- <discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes> -->
+					<!-- <node.attr.data_type>data</node.attr.data_type> -->
+					<!-- </properties> -->
+					<!-- <properties> -->
+					<!-- <node.name>node-ingest</node.name> -->
+					<!-- <discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes> -->
+					<!-- <node.attr.data_type>ingest</node.attr.data_type> -->
+					<!-- </properties> -->
+					<!-- <properties> -->
+					<!-- <node.name>node-search</node.name> -->
+					<!-- <discovery.zen.minimum_master_nodes>2</discovery.zen.minimum_master_nodes> -->
+					<!-- <node.attr.data_type>search</node.attr.data_type> -->
+					<!-- </properties> -->
+					<!-- </instanceSettings> -->
 					<plugins>
 						<plugin>
 							<uri>file:///${project.basedir}/../elasticsearch-plugin/target/releases/elasticsearch-plugin-${project.version}.zip</uri>
