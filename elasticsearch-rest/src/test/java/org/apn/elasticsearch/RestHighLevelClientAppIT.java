@@ -1,4 +1,4 @@
-package org.apn.elasticsearch.rest;
+package org.apn.elasticsearch;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -6,7 +6,8 @@ import java.util.Objects;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
-import org.apn.elasticsearch.rest.service.ProductService;
+import org.apn.elasticsearch.RestHighLevelClientApp;
+import org.apn.elasticsearch.service.ProductService;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;

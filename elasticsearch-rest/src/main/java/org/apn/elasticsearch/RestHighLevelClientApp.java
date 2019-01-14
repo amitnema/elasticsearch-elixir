@@ -1,4 +1,4 @@
-package org.apn.elasticsearch.rest;
+package org.apn.elasticsearch;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpStatus;
 import org.apache.http.util.Asserts;
-import org.apn.elasticsearch.rest.utils.Constants;
+import org.apn.elasticsearch.utils.Constants;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.action.DocWriteRequest;
 import org.elasticsearch.action.DocWriteResponse;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.apn.elasticsearch.rest.service;
+package org.apn.elasticsearch.service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apn.elasticsearch.rest.RestHighLevelClientApp;
-import org.apn.elasticsearch.rest.utils.Constants;
+import org.apn.elasticsearch.RestHighLevelClientApp;
+import org.apn.elasticsearch.utils.Constants;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;

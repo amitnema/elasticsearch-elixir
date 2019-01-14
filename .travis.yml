@@ -1,7 +1,9 @@
 language: java
-sudo: false
+sudo: true
 install: true
-
+before_script:
+  - sudo sysctl -w vm.max_map_count=262144
+  
 addons:
   sonarcloud:
     organization: "amitnema-github"

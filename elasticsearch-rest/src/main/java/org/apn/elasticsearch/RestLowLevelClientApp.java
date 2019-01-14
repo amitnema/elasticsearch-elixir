@@ -1,4 +1,4 @@
-package org.apn.elasticsearch.rest;
+package org.apn.elasticsearch;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -37,6 +37,7 @@ public class RestLowLevelClientApp implements Closeable {
 		client = RestClient.builder(hosts).build();
 	}
 
+	@Override
 	public void close() throws IOException {
 		if (Objects.nonNull(client))
 			client.close();

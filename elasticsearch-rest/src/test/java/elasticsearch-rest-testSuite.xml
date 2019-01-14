@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-      <class name="org.apn.elasticsearch.rest.RestHighLevelClientAppIT"/>
+      <class name="org.apn.elasticsearch.RestHighLevelClientAppIT"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

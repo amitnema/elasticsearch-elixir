@@ -1,4 +1,4 @@
-package org.apn;
+package org.apn.elasticsearch.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
