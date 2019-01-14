@@ -6,6 +6,7 @@ import java.util.Objects;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHost;
+import org.apn.elasticsearch.rest.service.ProductService;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -41,18 +42,18 @@ public class RestHighLevelClientAppIT {
 
 	@Test(dataProvider = "dpIndices")
 	public void deleteIndex(final String index) throws IOException {
-		boolean delete = app.deleteIndex(index);
+		final boolean delete = app.deleteIndex(index);
 		LOGGER.info("deleteIndex:" + delete);
 	}
 
 	@Test(dataProvider = "dpIndices", dependsOnMethods = "deleteIndex")
-	public void createIndex(String index) throws IOException {
+	public void createIndex(final String index) throws IOException {
 		final String settings = "{ \"index\": { \"number_of_shards\": \"1\", \"number_of_replicas\": \"1\" }}";
 		LOGGER.info("createIndex:" + app.createIndex(index, settings));
 	}
 
 	@Test(dataProvider = "dpIndices", dependsOnMethods = "bulkIndex")
-	public void refreshIndex(String index) throws IOException {
+	public void refreshIndex(final String index) throws IOException {
 		LOGGER.info("refreshIndex:" + app.refreshIndex(index));
 	}
 
@@ -62,8 +63,8 @@ public class RestHighLevelClientAppIT {
 	}
 
 	@Test(dataProvider = "dpIndexService", dependsOnMethods = "createIndex")
-	public void bulkIndex(String index, final ProductService productService) throws IOException {
-		productService.bulkIndex(index);
+	public void bulkIndex(final String index, final ProductService productService) throws IOException {
+		productService.bulkIndex(app, index);
 	}
 
 	@Test(dataProvider = "dpIndexService", dependsOnMethods = { "findById" })
@@ -77,7 +78,7 @@ public class RestHighLevelClientAppIT {
 	}
 
 	@Test(dataProvider = "dpFindById", dependsOnMethods = "refreshIndex")
-	public void findById(String index, String id) throws IOException {
+	public void findById(final String index, final String id) throws IOException {
 		app.findById(index, id);
 	}
 
