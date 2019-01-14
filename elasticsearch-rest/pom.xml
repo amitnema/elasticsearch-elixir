@@ -42,7 +42,7 @@
 					<skip>${skipITs}</skip>
 					<setAwait>false</setAwait>
 					<timeout>300</timeout>
-					<pathInitScript>${project.build.testOutputDirectory}\test-data\init.json</pathInitScript>
+					<pathInitScript>${project.basedir}\src\test\resources\test-data\init.json</pathInitScript>
 					<instanceCount>4</instanceCount>
 					<instanceSettings>
 						<properties>
