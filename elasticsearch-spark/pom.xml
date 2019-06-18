@@ -66,9 +66,12 @@
 				<groupId>com.github.alexcojocaru</groupId>
 				<artifactId>elasticsearch-maven-plugin</artifactId>
 				<configuration>
+                    <downloadUrl>https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${elasticsearch.version}-windows-x86_64.zip</downloadUrl>
+                    <flavour>default</flavour>
 					<version>${elasticsearch.version}</version>
 					<clusterName>test-cluster</clusterName>
 					<httpPort>${es.port}</httpPort>
+					<timeout>300</timeout>
 					<skip>${skipITs}</skip>
 				</configuration>
 				<executions>
