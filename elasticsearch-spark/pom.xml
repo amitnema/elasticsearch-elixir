@@ -72,6 +72,7 @@
 					<clusterName>test-cluster</clusterName>
 					<httpPort>${es.port}</httpPort>
 					<timeout>300</timeout>
+					<pathConf>${project.basedir}/../esMvnPlugin</pathConf>
 					<skip>${skipITs}</skip>
 				</configuration>
 				<executions>
