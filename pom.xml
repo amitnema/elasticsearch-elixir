@@ -33,10 +33,10 @@
 		<maven.compiler.target>${jdk.version}</maven.compiler.target>
 
 		<!-- Change to latest version -->
-		<elasticsearch.version>7.1.1</elasticsearch.version>
+		<elasticsearch.version>7.2.0</elasticsearch.version>
 		<junit.version>4.12</junit.version>
 		<scala.version>2.11</scala.version>
-		<scala.tools.version>${scala.version}.8</scala.tools.version>
+		<scala.tools.version>${scala.version}.12</scala.tools.version>
 		<scalatest.version>3.0.5</scalatest.version>
 		<lombok.version>1.18.2</lombok.version>
 

@@ -1,7 +1,5 @@
 package org.apn.elasticsearch.plugin;
 
-import java.io.IOException;
-
 import org.apache.lucene.search.MatchAllDocsQuery;
 import org.apache.lucene.search.Query;
 import org.elasticsearch.common.io.stream.StreamInput;
@@ -10,6 +8,8 @@ import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentParser;
 import org.elasticsearch.index.query.AbstractQueryBuilder;
 import org.elasticsearch.index.query.QueryShardContext;
+
+import java.io.IOException;
 
 /**
  * 
@@ -44,7 +44,7 @@ public class CustomQueryBuilder extends AbstractQueryBuilder<CustomQueryBuilder>
 	}
 
 	@Override
-	protected Query doToQuery(QueryShardContext context) throws IOException {
+	protected Query doToQuery(QueryShardContext context) {
 		return new MatchAllDocsQuery();
 	}
 
