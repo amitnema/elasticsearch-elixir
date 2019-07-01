@@ -2,6 +2,7 @@ package org.apn.elasticsearch.jdbc;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.sql.*;
@@ -11,9 +12,11 @@ import static org.junit.Assert.assertNotNull;
 /**
  * Test {@link JDBCClient} class.
  * This test required a elasticsearch cluster to be setup locally.
+ * Due to this this test is skipped (ignored). please setup a local cluster before running the test.
  *
  * @Amit Nema
  */
+@Ignore
 public class JDBCClientTest {
 
     private JDBCClient jdbcClient;
@@ -25,11 +28,11 @@ public class JDBCClientTest {
 
     @After
     public void tearDown() {
-        jdbcClient =null;
+        jdbcClient = null;
     }
 
     @Test
-    public void executeQuery() throws SQLException {
+    public void getConnection() throws SQLException {
         StringBuilder outTable = new StringBuilder();
 
         try (Connection conn = jdbcClient.getConnection()) {
