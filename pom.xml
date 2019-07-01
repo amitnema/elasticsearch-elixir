@@ -24,7 +24,8 @@
 		<module>elasticsearch-spark</module>
 		<module>elasticsearch-spring</module>
 		<module>elasticsearch-rest</module>
-	</modules>
+        <module>elasticsearch-jdbc</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
