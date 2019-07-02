@@ -1,8 +1,5 @@
 package org.apn.spring.data.es.config;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
@@ -15,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * 

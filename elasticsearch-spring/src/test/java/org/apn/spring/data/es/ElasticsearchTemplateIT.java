@@ -1,14 +1,5 @@
 package org.apn.spring.data.es;
 
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
-import static org.elasticsearch.index.query.QueryBuilders.matchQuery;
-import static org.junit.Assert.assertEquals;
-
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
 import org.apn.spring.data.es.config.Config;
 import org.apn.spring.data.es.entities.Book;
 import org.apn.spring.data.es.service.BookService;
@@ -29,6 +20,15 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
+import static org.elasticsearch.index.query.QueryBuilders.matchQuery;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Config.class)

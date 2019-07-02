@@ -1,12 +1,11 @@
 package org.apn.elasticsearch.spark.client
 
-import scala.reflect.runtime.universe.TypeTag
-
-import org.apache.spark.sql.Encoder
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
 import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.{Encoder, SparkSession}
 import org.elasticsearch.spark.rdd.EsSpark
+
+import scala.reflect.runtime.universe.TypeTag
 /**
  * @author amit.nema
  *

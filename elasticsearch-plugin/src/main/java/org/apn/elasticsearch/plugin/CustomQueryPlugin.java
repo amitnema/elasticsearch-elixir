@@ -3,12 +3,12 @@
  */
 package org.apn.elasticsearch.plugin;
 
-import static java.util.Collections.singletonList;
+import org.elasticsearch.plugins.Plugin;
+import org.elasticsearch.plugins.SearchPlugin;
 
 import java.util.List;
 
-import org.elasticsearch.plugins.Plugin;
-import org.elasticsearch.plugins.SearchPlugin;
+import static java.util.Collections.singletonList;
 
 /**
  * @author amit.nema

@@ -1,12 +1,9 @@
 package org.apn.elasticsearch.migration.client
 
-import org.apn.elasticsearch.migration.ArgumentsParser
-import org.apn.elasticsearch.migration.ConfigurationType
-import org.apn.elasticsearch.migration.factory.IndexFileReaderFactory
-import org.apn.elasticsearch.migration.factory.IndexFileWriterFactory
-import java.nio.file.Path
-import java.nio.file.Paths
 import java.io.File
+
+import org.apn.elasticsearch.migration.factory.{IndexFileReaderFactory, IndexFileWriterFactory}
+import org.apn.elasticsearch.migration.{ArgumentsParser, ConfigurationType}
 
 object EngineMigration extends App {
 

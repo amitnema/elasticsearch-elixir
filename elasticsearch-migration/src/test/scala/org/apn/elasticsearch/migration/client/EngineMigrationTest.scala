@@ -1,11 +1,10 @@
 package org.apn.elasticsearch.migration.client
 
-import org.scalatest.BeforeAndAfterAllConfigMap
-import org.scalatest.ConfigMap
-import org.scalatest.FunSuite
 import org.apn.elasticsearch.migration.ArgumentsParser
-import scala.io.Source
 import org.json.JSONObject
+import org.scalatest.{BeforeAndAfterAllConfigMap, ConfigMap, FunSuite}
+
+import scala.io.Source
 
 /**
  * @author amit.nema

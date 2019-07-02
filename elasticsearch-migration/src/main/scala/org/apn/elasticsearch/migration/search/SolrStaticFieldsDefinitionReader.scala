@@ -1,16 +1,12 @@
 package org.apn.elasticsearch.migration.search
 
-import java.io.File
-import java.io.IOException
+import java.io.{File, IOException}
+
+import org.apn.elasticsearch.migration.typ.Field
+import org.json.{JSONArray, JSONObject, XML}
 
 import scala.collection.JavaConversions.iterableAsScalaIterable
 import scala.io.Source
-
-import org.json.JSONArray
-import org.json.JSONObject
-import org.json.XML
-
-import org.apn.elasticsearch.migration.typ.Field
 
 class SolrStaticFieldsDefinitionReader(val file: File) {
   private var solrConfFileJson: JSONObject = _

@@ -1,7 +1,8 @@
 package org.apn.elasticsearch.migration.factory
 
-import org.json.JSONObject
 import java.io.IOException
+
+import org.json.JSONObject
 
 trait IndexStructureReader {
   @throws(classOf[IOException])
