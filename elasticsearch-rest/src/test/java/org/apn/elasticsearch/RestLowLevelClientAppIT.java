@@ -40,7 +40,7 @@ public class RestLowLevelClientAppIT {
         app.findById(index, id);
     }
 
-    @Test(dataProvider = "dpFindById", dependsOnMethods = "testRefreshIndex")
+    @Test(dataProvider = "dpFindById", dependsOnMethods = "testRefreshIndex", enabled = false)
     public void testFindByIdSQL(final String index, final String id) throws IOException {
         app.findByIdSQL(index, id);
     }

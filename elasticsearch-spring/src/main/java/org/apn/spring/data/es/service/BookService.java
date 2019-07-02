@@ -1,10 +1,10 @@
 package org.apn.spring.data.es.service;
 
-import java.util.Optional;
-
 import org.apn.spring.data.es.entities.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
+import java.util.Optional;
 
 public interface BookService {
 

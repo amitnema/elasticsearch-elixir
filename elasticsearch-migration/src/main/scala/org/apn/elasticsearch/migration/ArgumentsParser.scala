@@ -1,10 +1,6 @@
 package org.apn.elasticsearch.migration
 
-import org.apache.commons.cli.DefaultParser
-import org.apache.commons.cli.HelpFormatter
-import org.apache.commons.cli.Option
-import org.apache.commons.cli.Options
-
+import org.apache.commons.cli.{DefaultParser, HelpFormatter, Option, Options}
 import org.apn.elasticsearch.migration.bean.Arguments
 
 object ArgumentsParser {

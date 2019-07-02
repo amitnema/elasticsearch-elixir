@@ -1,15 +1,12 @@
 package org.apn.elasticsearch.spark.client
 
-import org.scalatest.FunSuite
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.SparkConf
-import org.scalatest.BeforeAndAfterAllConfigMap
-import org.scalatest.ConfigMap
-import org.scalatest.BeforeAndAfterAll
-import org.apache.spark.SparkConf
-import org.elasticsearch.hadoop.cfg.ConfigurationOptions
 import java.util.concurrent.TimeUnit
+
+import org.apache.spark.SparkConf
+import org.apache.spark.sql.SparkSession
 import org.elasticsearch.hadoop.EsHadoopIllegalStateException
+import org.elasticsearch.hadoop.cfg.ConfigurationOptions
+import org.scalatest.{BeforeAndAfterAll, FunSuite}
 
 /**
  * @author amit.nema

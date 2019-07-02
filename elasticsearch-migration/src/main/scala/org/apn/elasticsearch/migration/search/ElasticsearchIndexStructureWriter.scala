@@ -1,11 +1,10 @@
 package org.apn.elasticsearch.migration.search
 
-import org.apn.elasticsearch.migration.factory.IndexStructureWriter
-import org.json.JSONObject
 import java.io.FileWriter
+
+import org.apn.elasticsearch.migration.factory.IndexStructureWriter
 import org.apn.elasticsearch.migration.typ.Field
-import org.json.JSONArray
-import org.json.JSONWriter
+import org.json.{JSONArray, JSONObject}
 
 class ElasticsearchIndexStructureWriter(val shards: Int, val replicas: Int) extends IndexStructureWriter {
 
