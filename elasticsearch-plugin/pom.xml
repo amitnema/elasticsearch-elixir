@@ -11,8 +11,6 @@
 	<name>Elasticsearch Plugin</name>
 
 	<properties>
-		<lucene.version>8.4.0</lucene.version>
-
 		<plugin.name>elasticsearch-custom-plugin</plugin.name>
 		<description>Elastic Search query parser custom plugin.</description>
 		<plugin.class>org.apn.elasticsearch.plugin.CustomQueryPlugin</plugin.class>
