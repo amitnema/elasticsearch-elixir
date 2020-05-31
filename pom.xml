@@ -24,8 +24,8 @@
 		<module>elasticsearch-spark</module>
 		<module>elasticsearch-spring</module>
 		<module>elasticsearch-rest</module>
-        <module>elasticsearch-jdbc</module>
-    </modules>
+		<module>elasticsearch-jdbc</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +34,8 @@
 		<maven.compiler.target>${jdk.version}</maven.compiler.target>
 
 		<!-- Change to latest version -->
-		<elasticsearch.version>7.6.2</elasticsearch.version>
+		<elasticsearch.version>7.7.0</elasticsearch.version>
+		<lucene.version>8.5.1</lucene.version>
 		<junit.version>4.12</junit.version>
 		<scala.version>2.11</scala.version>
 		<scala.tools.version>${scala.version}.12</scala.tools.version>

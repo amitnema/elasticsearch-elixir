@@ -14,7 +14,6 @@
 
 	<properties>
 		<spark.version>2.4.0</spark.version>
-		<lucene.version>7.2.1</lucene.version>
 	</properties>
 
 	<dependencies>
